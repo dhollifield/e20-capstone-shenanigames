@@ -1,0 +1,484 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Deanna Hollifield",
+      "email": "deannahollifield@gmail.com",
+      "isAdmin": true
+    },
+    {
+      "id": 2,
+      "fullName": "Suzie Clanton",
+      "email": "suzieclanton@gmail.com",
+      "isAdmin": false
+    },
+    {
+      "email": "shastynasty@jupiter.com",
+      "fullName": "Shasta Newbill",
+      "isAdmin": false,
+      "id": 3
+    },
+    {
+      "email": "mikeswig@hotmail.com",
+      "fullName": "Mike Swig",
+      "isAdmin": false,
+      "id": 4
+    },
+    {
+      "email": "michaeljhollifield@gmail.com",
+      "fullName": "Michael Hollifield",
+      "isAdmin": true,
+      "id": 5
+    }
+  ],
+  "games": [
+    {
+      "id": 1,
+      "name": "Catan",
+      "minPlayers": "3",
+      "maxPlayers": "4",
+      "suggestedAge": "10",
+      "minPlayingTimeInMinutes": "60",
+      "maxPlayingTimeInMinutes": "120",
+      "imageURL": "https://cf.geekdo-images.com/W3Bsga_uLP9kO91gZ7H8yw__imagepage/img/M_3Vg1j2HlNgkv7PL2xl2BJE2bw=/fit-in/900x600/filters:no_upscale():strip_icc()/pic2419375.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Codenames",
+      "minPlayers": "2",
+      "maxPlayers": "8",
+      "suggestedAge": "14",
+      "minPlayingTimeInMinutes": "15",
+      "maxPlayingTimeInMinutes": "30",
+      "imageURL": "https://cf.geekdo-images.com/F_KDEu0GjdClml8N7c8Imw__imagepage/img/rc_Do8f5v41nWEGcwHE1eKAkIfI=/fit-in/900x600/filters:no_upscale():strip_icc()/pic2582929.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Red Dragon Inn",
+      "minPlayers": "2",
+      "maxPlayers": "4",
+      "suggestedAge": "13",
+      "minPlayingTimeInMinutes": "45",
+      "maxPlayingTimeInMinutes": "60",
+      "imageURL": "https://cf.geekdo-images.com/RCXedcfgn5LSfH4-kOUvLA__imagepage/img/OO77sLjdIoIr_4qW9NuYmD9fsm4=/fit-in/900x600/filters:no_upscale():strip_icc()/pic291048.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Pandemic",
+      "minPlayers": "2",
+      "maxPlayers": "4",
+      "suggestedAge": "8",
+      "minPlayingTimeInMinutes": "45",
+      "maxPlayingTimeInMinutes": "60",
+      "imageURL": "https://cf.geekdo-images.com/S3ybV1LAp-8SnHIXLLjVqA__imagepage/img/kIBu-2Ljb_ml5n-S8uIbE6ehGFc=/fit-in/900x600/filters:no_upscale():strip_icc()/pic1534148.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Mombasa",
+      "minPlayers": "2",
+      "maxPlayers": "4",
+      "suggestedAge": "12",
+      "minPlayingTimeInMinutes": "75",
+      "maxPlayingTimeInMinutes": "150",
+      "imageURL": "https://cf.geekdo-images.com/VceWk5QVkgIp6rWDl5qHKQ__imagepage/img/dRceRWoo6krz6O6kJEygn94jq7s=/fit-in/900x600/filters:no_upscale():strip_icc()/pic2611318.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Azul",
+      "minPlayers": "2",
+      "maxPlayers": "4",
+      "suggestedAge": "8",
+      "minPlayingTimeInMinutes": "30",
+      "maxPlayingTimeInMinutes": "45",
+      "imageURL": "https://cf.geekdo-images.com/aPSHJO0d0XOpQR5X-wJonw__imagepage/img/q4uWd2nXGeEkKDR8Cc3NhXG9PEU=/fit-in/900x600/filters:no_upscale():strip_icc()/pic6973671.png"
+    },
+    {
+      "id": 7,
+      "name": "Rival Restaurants",
+      "minPlayers": "2",
+      "maxPlayers": "6",
+      "suggestedAge": "10",
+      "minPlayingTimeInMinutes": "45",
+      "maxPlayingTimeInMinutes": "60",
+      "imageURL": "https://cf.geekdo-images.com/yb9s6hjEiW0coDBuVksctQ__imagepage/img/TFLgTbWe-hNyXryqXi_4-5bUMqY=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5139339.png"
+    },
+    {
+      "id": 8,
+      "name": "Pictionary",
+      "minPlayers": "3",
+      "maxPlayers": "16",
+      "suggestedAge": "12",
+      "minPlayingTimeInMinutes": "90",
+      "maxPlayingTimeInMinutes": "120",
+      "imageURL": "https://cf.geekdo-images.com/YfUxodD7JSqYitxvjXB69Q__imagepage/img/DX6-XYd-2-RNTaWIEhcIjoJsNXQ=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5147022.png"
+    },
+    {
+      "id": 9,
+      "name": "Coup",
+      "minPlayers": "2",
+      "maxPlayers": "6",
+      "suggestedAge": "13",
+      "minPlayingTimeInMinutes": "15",
+      "maxPlayingTimeInMinutes": "30",
+      "imageURL": "https://cf.geekdo-images.com/MWhSY_GOe2-bmlQ2rntSVg__imagepage/img/HPKaW4sG3jlaO3MM5V6x0Ks0DGI=/fit-in/900x600/filters:no_upscale():strip_icc()/pic2016054.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Dominion",
+      "minPlayers": "2",
+      "maxPlayers": "4",
+      "suggestedAge": "13",
+      "minPlayingTimeInMinutes": "30",
+      "maxPlayingTimeInMinutes": "45",
+      "imageURL": "https://cf.geekdo-images.com/j6iQpZ4XkemZP07HNCODBA__imagepage/img/bbKggiASKA1E8sAh2cH07czaGn4=/fit-in/900x600/filters:no_upscale():strip_icc()/pic394356.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Tokaido",
+      "minPlayers": "2",
+      "maxPlayers": "5",
+      "suggestedAge": "8",
+      "minPlayingTimeInMinutes": "45",
+      "maxPlayingTimeInMinutes": "60",
+      "imageURL": "https://cf.geekdo-images.com/-sUA2HQNFHBxOdzHE6Ywlg__imagepage/img/Br4ID7DkwYIkiR6an7lqiKuRkRw=/fit-in/900x600/filters:no_upscale():strip_icc()/pic3747956.png"
+    },
+    {
+      "id": 12,
+      "name": "Bang",
+      "minPlayers": "4",
+      "maxPlayers": "7",
+      "suggestedAge": "10",
+      "minPlayingTimeInMinutes": "20",
+      "maxPlayingTimeInMinutes": "40",
+      "imageURL": "https://cf.geekdo-images.com/_04xA-d-rfygm0c49HE4vA__imagepage/img/z7zjURq1H0BJBpyVq3r_DZ_as48=/fit-in/900x600/filters:no_upscale():strip_icc()/pic1170986.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Love Letter",
+      "minPlayers": "2",
+      "maxPlayers": "4",
+      "suggestedAge": "10",
+      "minPlayingTimeInMinutes": "20",
+      "maxPlayingTimeInMinutes": "30",
+      "imageURL": "https://cf.geekdo-images.com/T1ltXwapFUtghS9A7_tf4g__imagepage/img/wf3HgW2e24O0mcsB5OIHJnxaeIM=/fit-in/900x600/filters:no_upscale():strip_icc()/pic1401448.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Ransom Notes",
+      "minPlayers": "3",
+      "maxPlayers": "6",
+      "suggestedAge": "17",
+      "minPlayingTimeInMinutes": "30",
+      "maxPlayingTimeInMinutes": "90",
+      "imageURL": "https://cf.geekdo-images.com/yggkhvDY23J0zVTNvgao3g__imagepage/img/DfOTz3oZknG7ijYKyvXgFXhHtds=/fit-in/900x600/filters:no_upscale():strip_icc()/pic6521910.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Telestrations",
+      "minPlayers": "4",
+      "maxPlayers": "6",
+      "suggestedAge": "12",
+      "minPlayingTimeInMinutes": "30",
+      "maxPlayingTimeInMinutes": "45",
+      "imageURL": "https://cf.geekdo-images.com/oc3u6OQpJkf9TvDw4iI9xA__imagepage/img/pqfDnwFGf2MqIP307y0La81AIRg=/fit-in/900x600/filters:no_upscale():strip_icc()/pic4991936.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Disney Villainous",
+      "minPlayers": "2",
+      "maxPlayers": "6",
+      "suggestedAge": "10",
+      "minPlayingTimeInMinutes": "45",
+      "maxPlayingTimeInMinutes": "60",
+      "imageURL": "https://cf.geekdo-images.com/7Ej5V5Dq92QdvVFvISfl_A__imagepage/img/fO_sFtYg4_0VYaC9Q-pWamXQM2c=/fit-in/900x600/filters:no_upscale():strip_icc()/pic4216110.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Marvel Villainous: Infinite Power",
+      "minPlayers": "2",
+      "maxPlayers": "4",
+      "suggestedAge": "12",
+      "minPlayingTimeInMinutes": "45",
+      "maxPlayingTimeInMinutes": "90",
+      "imageURL": "https://cf.geekdo-images.com/tZN9xSmobQLvGBW7wOW3aA__imagepage/img/QQYZHj0YxaW_gf4Mgh3y9yB3uEY=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5239853.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Ticket to Ride",
+      "minPlayers": "2",
+      "maxPlayers": "5",
+      "suggestedAge": "8",
+      "minPlayingTimeInMinutes": "30",
+      "maxPlayingTimeInMinutes": "60",
+      "imageURL": "https://cf.geekdo-images.com/ZWJg0dCdrWHxVnc0eFXK8w__imagepage/img/FcSGmLeIStNfb0l_qKSuOyz-rHY=/fit-in/900x600/filters:no_upscale():strip_icc()/pic38668.jpg"
+    },
+    {
+      "name": "Betrayal at House on the Hill",
+      "minPlayers": "3",
+      "maxPlayers": "5",
+      "suggestedAge": "10",
+      "minPlayingTimeInMinutes": "4",
+      "maxPlayingTimeInMinutes": "4",
+      "imageURL": "https://cf.geekdo-images.com/lqmt2Oti_qJS65XqHcB8AA__imagepage/img/dxrUKI24svPBCJAcNqzHy_uayp4=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5146864.png",
+      "id": 19
+    }
+  ],
+  "minPlayers": [
+    {
+      "id": 1,
+      "minAmount": "1"
+    },
+    {
+      "id": 2,
+      "minAmount": "2"
+    },
+    {
+      "id": 3,
+      "minAmount": "3"
+    },
+    {
+      "id": 4,
+      "minAmount": "4"
+    },
+    {
+      "id": 5,
+      "minAmount": "5"
+    },
+    {
+      "id": 6,
+      "minAmount": "6"
+    }
+  ],
+  "maxPlayers": [
+    {
+      "id": 1,
+      "maxAmount": "2"
+    },
+    {
+      "id": 2,
+      "maxAmount": "3"
+    },
+    {
+      "id": 3,
+      "maxAmount": "4"
+    },
+    {
+      "id": 4,
+      "maxAmount": "5"
+    },
+    {
+      "id": 5,
+      "maxAmount": "6"
+    },
+    {
+      "id": 6,
+      "maxAmount": "7"
+    },
+    {
+      "id": 7,
+      "maxAmount": "8"
+    },
+    {
+      "id": 8,
+      "maxAmount": "9"
+    },
+    {
+      "id": 9,
+      "maxAmount": "10"
+    },
+    {
+      "id": 10,
+      "maxAmount": "11"
+    },
+    {
+      "id": 11,
+      "maxAmount": "12"
+    },
+    {
+      "id": 12,
+      "maxAmount": "13"
+    },
+    {
+      "id": 13,
+      "maxAmount": "14"
+    },
+    {
+      "id": 14,
+      "maxAmount": "15"
+    },
+    {
+      "id": 15,
+      "maxAmount": "16"
+    }
+  ],
+  "suggestedAge": [
+    {
+      "id": 1,
+      "age": "3"
+    },
+    {
+      "id": 2,
+      "age": "4"
+    },
+    {
+      "id": 3,
+      "age": "5"
+    },
+    {
+      "id": 4,
+      "age": "6"
+    },
+    {
+      "id": 5,
+      "age": "7"
+    },
+    {
+      "id": 6,
+      "age": "8"
+    },
+    {
+      "id": 7,
+      "age": "9"
+    },
+    {
+      "id": 8,
+      "age": "10"
+    },
+    {
+      "id": 9,
+      "age": "11"
+    },
+    {
+      "id": 10,
+      "age": "12"
+    },
+    {
+      "id": 11,
+      "age": "13"
+    },
+    {
+      "id": 12,
+      "age": "14"
+    },
+    {
+      "id": 13,
+      "age": "15"
+    },
+    {
+      "id": 14,
+      "age": "16"
+    },
+    {
+      "id": 15,
+      "age": "17"
+    },
+    {
+      "id": 16,
+      "age": "18"
+    }
+  ],
+  "minPlayingTime": [
+    {
+      "id": 1,
+      "minTime": "15"
+    },
+    {
+      "id": 2,
+      "minTime": "30"
+    },
+    {
+      "id": 3,
+      "minTime": "45"
+    },
+    {
+      "id": 4,
+      "minTime": "60"
+    },
+    {
+      "id": 5,
+      "minTime": "90"
+    },
+    {
+      "id": 6,
+      "minTime": "120"
+    }
+  ],
+  "maxPlayingTime": [
+    {
+      "id": 1,
+      "maxTime": "30"
+    },
+    {
+      "id": 2,
+      "maxTime": "45"
+    },
+    {
+      "id": 3,
+      "maxTime": "60"
+    },
+    {
+      "id": 4,
+      "maxTime": "90"
+    },
+    {
+      "id": 5,
+      "maxTime": "120"
+    },
+    {
+      "id": 6,
+      "maxTime": "150"
+    },
+    {
+      "id": 7,
+      "maxTime": "180"
+    },
+    {
+      "id": 8,
+      "maxTime": "200"
+    },
+    {
+      "id": 9,
+      "maxTime": "240"
+    },
+    {
+      "id": 10,
+      "maxTime": ">240"
+    }
+  ],
+  "userCollection": [
+    {
+      "id": 1,
+      "userId": 1,
+      "games": [
+        "http://localhost:8088/games/1",
+        "http://localhost:8088/games/2"
+      ]
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "games": [
+        "http://localhost:8088/games/3",
+        "http://localhost:8088/games/4"
+      ]
+    }
+  ],
+  "userWishlist": [
+    {
+      "id": 1,
+      "userId": 1,
+      "games": [
+        "http://localhost:8088/games/3",
+        "http://localhost:8088/games/4"
+      ]
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "games": [
+        "http://localhost:8088/games/1",
+        "http://localhost:8088/games/2"
+      ]
+    }
+  ]
+}
