@@ -1,4 +1,4 @@
-import { CapstoneTemplate } from "./components/CapstoneTemplate";
+import { Shenanigames } from "./components/Shenanigames";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
@@ -7,6 +7,6 @@ const container = document.getElementById("root");
 const root = createRoot(container);
 root.render(
   <BrowserRouter>
-    <CapstoneTemplate />
+    <Shenanigames />
   </BrowserRouter>
 );

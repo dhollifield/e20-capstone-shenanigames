@@ -6,6 +6,7 @@ export const Register = (props) => {
   const [user, setUser] = useState({
     email: "",
     fullName: "",
+    isAdmin: false,
   });
   let navigate = useNavigate();
 
@@ -79,6 +80,18 @@ export const Register = (props) => {
             placeholder="Email address"
             required
           />
+        </fieldset>
+        <fieldset>
+          <input
+            onChange={(evt) => {
+              const copy = { ...user };
+              copy.isAdmin = evt.target.checked;
+              setUser(copy);
+            }}
+            type="checkbox"
+            id="isAdmin"
+          />
+          <label htmlFor="userType"> Admin </label>
         </fieldset>
         <fieldset>
           <button type="submit"> Register </button>

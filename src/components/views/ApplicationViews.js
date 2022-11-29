@@ -1,6 +1,15 @@
-export const ApplicationViews = () => {
-  // const localProjectUser = localStorage.getItem("capstone_user");
-  // const projectUserObject = JSON.parse(localProjectUser);
+import { UserViews } from "./UserViews";
+import { AdminViews } from "./AdminViews";
 
-  return "<h1>A Blank Page!!</h1>";
-};
+export const ApplicationViews = () => {
+
+  const capstoneUser = localStorage.getItem("capstone_user")
+  const gamesUserObject = JSON.parse(capstoneUser)
+
+  if (gamesUserObject.isAdmin) {
+      return <AdminViews />
+  }
+  else {
+      return <UserViews />
+  }
+}
