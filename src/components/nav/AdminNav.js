@@ -8,6 +8,11 @@ export const AdminNav = () => {
         <div className="navImgContainer">
             <div className="navBarLinks">
                 <div className="navbar__item active">
+                    <Link className="navbar__link" to="/">
+                        Discover
+                    </Link>
+                </div>
+                <div className="navbar__item active">
                     <Link className="navbar__link" to="/adminCollection">
                         My Collection
                     </Link>
@@ -18,7 +23,7 @@ export const AdminNav = () => {
                     </Link>
                 </div>
                 <div className="navbar__item active">
-                    <Link className="navbar__link" to="/adminCommunity">
+                    <Link className="navbar__link" to="/community">
                         Community
                     </Link>
                 </div>

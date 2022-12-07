@@ -1,34 +1,58 @@
 {
   "users": [
     {
-      "id": 1,
-      "fullName": "Deanna Hollifield",
       "email": "deannahollifield@gmail.com",
-      "isAdmin": true
+      "isAdmin": true,
+      "firstName": "Deanna",
+      "lastName": "Hollifield",
+      "cityName": "Thompsons Station",
+      "stateName": "TN",
+      "id": 1
     },
     {
-      "id": 2,
-      "fullName": "Suzie Clanton",
       "email": "suzieclanton@gmail.com",
-      "isAdmin": false
+      "isAdmin": false,
+      "firstName": "Suzie",
+      "lastName": "Clanton",
+      "cityName": "Cookeville",
+      "stateName": "TN",
+      "id": 2
     },
     {
       "email": "shastynasty@jupiter.com",
-      "fullName": "Shasta Newbill",
       "isAdmin": false,
+      "firstName": "Shasta",
+      "lastName": "Newbill",
+      "cityName": "Little Rock",
+      "stateName": "AR",
       "id": 3
     },
     {
       "email": "mikeswig@hotmail.com",
-      "fullName": "Mike Swig",
       "isAdmin": false,
+      "firstName": "Mike",
+      "lastName": "Swig",
+      "cityName": "Oklahoma City",
+      "stateName": "OK",
       "id": 4
     },
     {
       "email": "michaeljhollifield@gmail.com",
-      "fullName": "Michael Hollifield",
       "isAdmin": true,
+      "firstName": "Michael",
+      "lastName": "Hollifield",
+      "cityName": "Thompsons Station",
+      "stateName": "TN",
       "id": 5
+    },
+    {
+      "email": "dkilgore@rhp.com",
+      "isAdmin": false,
+      "firstName": "Deborah",
+      "lastName": "Kilgore",
+      "cityName": "Nashville",
+      "stateName": "TN",
+      "id": 6
     }
   ],
   "games": [
@@ -81,16 +105,6 @@
       "minPlayingTimeInMinutes": "75",
       "maxPlayingTimeInMinutes": "150",
       "imageURL": "https://cf.geekdo-images.com/VceWk5QVkgIp6rWDl5qHKQ__imagepage/img/dRceRWoo6krz6O6kJEygn94jq7s=/fit-in/900x600/filters:no_upscale():strip_icc()/pic2611318.jpg"
-    },
-    {
-      "id": 6,
-      "name": "Azul",
-      "minPlayers": "2",
-      "maxPlayers": "4",
-      "suggestedAge": "8",
-      "minPlayingTimeInMinutes": "30",
-      "maxPlayingTimeInMinutes": "45",
-      "imageURL": "https://cf.geekdo-images.com/aPSHJO0d0XOpQR5X-wJonw__imagepage/img/q4uWd2nXGeEkKDR8Cc3NhXG9PEU=/fit-in/900x600/filters:no_upscale():strip_icc()/pic6973671.png"
     },
     {
       "id": 7,
@@ -215,270 +229,106 @@
     {
       "name": "Betrayal at House on the Hill",
       "minPlayers": "3",
-      "maxPlayers": "5",
-      "suggestedAge": "10",
-      "minPlayingTimeInMinutes": "4",
-      "maxPlayingTimeInMinutes": "4",
+      "maxPlayers": "6",
+      "suggestedAge": "12",
+      "minPlayingTimeInMinutes": "60",
+      "maxPlayingTimeInMinutes": "90",
       "imageURL": "https://cf.geekdo-images.com/lqmt2Oti_qJS65XqHcB8AA__imagepage/img/dxrUKI24svPBCJAcNqzHy_uayp4=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5146864.png",
       "id": 19
-    }
-  ],
-  "minPlayers": [
-    {
-      "id": 1,
-      "minAmount": "1"
     },
     {
-      "id": 2,
-      "minAmount": "2"
+      "name": "Carcassonne",
+      "minPlayers": "2",
+      "maxPlayers": "5",
+      "suggestedAge": "7",
+      "minPlayingTimeInMinutes": "30",
+      "maxPlayingTimeInMinutes": "45",
+      "imageURL": "https://cf.geekdo-images.com/okM0dq_bEXnbyQTOvHfwRA__imagepage/img/axGbn7f0x6UUb07DmzX9hg5TwIo=/fit-in/900x600/filters:no_upscale():strip_icc()/pic6544250.png",
+      "id": 20
     },
     {
-      "id": 3,
-      "minAmount": "3"
+      "name": "Amazed",
+      "minPlayers": "2",
+      "maxPlayers": "10+",
+      "suggestedAge": "14",
+      "minPlayingTimeInMinutes": "30",
+      "maxPlayingTimeInMinutes": "60",
+      "imageURL": "https://cf.geekdo-images.com/ObhCdezWMEuFn8ypmTTEzA__imagepagezoom/img/1MehWrApY4zNNpA7LnIrZvf8bs0=/fit-in/1200x900/filters:no_upscale():strip_icc()/pic4464413.jpg",
+      "id": 22
     },
     {
-      "id": 4,
-      "minAmount": "4"
+      "name": "Sheriff of Nottingham",
+      "minPlayers": "3",
+      "maxPlayers": "5",
+      "suggestedAge": "14",
+      "minPlayingTimeInMinutes": "60",
+      "maxPlayingTimeInMinutes": "90",
+      "imageURL": "https://cf.geekdo-images.com/BBgLFKUzr6tcKtlIM2JSFw__imagepage/img/_3bSh9NeLxkL23XBruNlzxk5QCM=/fit-in/900x600/filters:no_upscale():strip_icc()/pic2075830.jpg",
+      "id": 23
     },
     {
-      "id": 5,
-      "minAmount": "5"
+      "name": "Jaipur",
+      "minPlayers": "2",
+      "maxPlayers": "3",
+      "suggestedAge": "12",
+      "minPlayingTimeInMinutes": "30",
+      "maxPlayingTimeInMinutes": "45",
+      "imageURL": "https://cf.geekdo-images.com/_LTujSe_o16nvjDC-J0seA__imagepage/img/X7qZxqheM7_ADLuPhC11b_9IhYw=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5100947.jpg",
+      "id": 24
     },
     {
-      "id": 6,
-      "minAmount": "6"
-    }
-  ],
-  "maxPlayers": [
-    {
-      "id": 1,
-      "maxAmount": "2"
-    },
-    {
-      "id": 2,
-      "maxAmount": "3"
-    },
-    {
-      "id": 3,
-      "maxAmount": "4"
-    },
-    {
-      "id": 4,
-      "maxAmount": "5"
-    },
-    {
-      "id": 5,
-      "maxAmount": "6"
-    },
-    {
-      "id": 6,
-      "maxAmount": "7"
-    },
-    {
-      "id": 7,
-      "maxAmount": "8"
-    },
-    {
-      "id": 8,
-      "maxAmount": "9"
-    },
-    {
-      "id": 9,
-      "maxAmount": "10"
-    },
-    {
-      "id": 10,
-      "maxAmount": "11"
-    },
-    {
-      "id": 11,
-      "maxAmount": "12"
-    },
-    {
-      "id": 12,
-      "maxAmount": "13"
-    },
-    {
-      "id": 13,
-      "maxAmount": "14"
-    },
-    {
-      "id": 14,
-      "maxAmount": "15"
-    },
-    {
-      "id": 15,
-      "maxAmount": "16"
-    }
-  ],
-  "suggestedAge": [
-    {
-      "id": 1,
-      "age": "3"
-    },
-    {
-      "id": 2,
-      "age": "4"
-    },
-    {
-      "id": 3,
-      "age": "5"
-    },
-    {
-      "id": 4,
-      "age": "6"
-    },
-    {
-      "id": 5,
-      "age": "7"
-    },
-    {
-      "id": 6,
-      "age": "8"
-    },
-    {
-      "id": 7,
-      "age": "9"
-    },
-    {
-      "id": 8,
-      "age": "10"
-    },
-    {
-      "id": 9,
-      "age": "11"
-    },
-    {
-      "id": 10,
-      "age": "12"
-    },
-    {
-      "id": 11,
-      "age": "13"
-    },
-    {
-      "id": 12,
-      "age": "14"
-    },
-    {
-      "id": 13,
-      "age": "15"
-    },
-    {
-      "id": 14,
-      "age": "16"
-    },
-    {
-      "id": 15,
-      "age": "17"
-    },
-    {
-      "id": 16,
-      "age": "18"
-    }
-  ],
-  "minPlayingTime": [
-    {
-      "id": 1,
-      "minTime": "15"
-    },
-    {
-      "id": 2,
-      "minTime": "30"
-    },
-    {
-      "id": 3,
-      "minTime": "45"
-    },
-    {
-      "id": 4,
-      "minTime": "60"
-    },
-    {
-      "id": 5,
-      "minTime": "90"
-    },
-    {
-      "id": 6,
-      "minTime": "120"
-    }
-  ],
-  "maxPlayingTime": [
-    {
-      "id": 1,
-      "maxTime": "30"
-    },
-    {
-      "id": 2,
-      "maxTime": "45"
-    },
-    {
-      "id": 3,
-      "maxTime": "60"
-    },
-    {
-      "id": 4,
-      "maxTime": "90"
-    },
-    {
-      "id": 5,
-      "maxTime": "120"
-    },
-    {
-      "id": 6,
-      "maxTime": "150"
-    },
-    {
-      "id": 7,
-      "maxTime": "180"
-    },
-    {
-      "id": 8,
-      "maxTime": "200"
-    },
-    {
-      "id": 9,
-      "maxTime": "240"
-    },
-    {
-      "id": 10,
-      "maxTime": ">240"
+      "name": "Wingspan",
+      "minPlayers": "1",
+      "maxPlayers": "5",
+      "suggestedAge": "10",
+      "minPlayingTimeInMinutes": "45",
+      "maxPlayingTimeInMinutes": "90",
+      "imageURL": "https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__imagepage/img/uIjeoKgHMcRtzRSR4MoUYl3nXxs=/fit-in/900x600/filters:no_upscale():strip_icc()/pic4458123.jpg",
+      "id": 25
     }
   ],
   "userCollection": [
     {
       "id": 1,
       "userId": 1,
-      "games": [
-        "http://localhost:8088/games/1",
-        "http://localhost:8088/games/2"
-      ]
+      "gamesId": 1
     },
     {
       "id": 2,
+      "userId": 1,
+      "gamesId": 2
+    },
+    {
+      "id": 3,
       "userId": 2,
-      "games": [
-        "http://localhost:8088/games/3",
-        "http://localhost:8088/games/4"
-      ]
+      "gamesId": 3
+    }, 
+    {
+      "id": 4,
+      "userId": 2,
+      "gamesId": 4
     }
   ],
   "userWishlist": [
     {
       "id": 1,
       "userId": 1,
-      "games": [
-        "http://localhost:8088/games/3",
-        "http://localhost:8088/games/4"
-      ]
+      "gamesId": 3
     },
     {
       "id": 2,
+      "userId": 1,
+      "gamesId": 4
+    },
+    {
+      "id": 3,
       "userId": 2,
-      "games": [
-        "http://localhost:8088/games/1",
-        "http://localhost:8088/games/2"
-      ]
+      "gamesId": 1
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "gamesId": 2
     }
   ]
 }
