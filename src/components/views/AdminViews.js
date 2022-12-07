@@ -1,5 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
+import { AdminCollection } from '../collection/AdminCollection';
+import { CommunityList } from '../community/CommunityList';
 import { AddGamesForm } from '../games/AddGamesForm';
+import { EditGameForm } from '../games/EditGameForm';
 import { GamesList } from "../games/GamesList";
 
 export const AdminViews = () => {
@@ -13,7 +16,10 @@ export const AdminViews = () => {
           </>
         }
       ></Route>
-      <Route path="games/addNew" element={<AddGamesForm />} />
+      <Route path="community" element={<CommunityList />} />
+      <Route path="adminCollection" element={<AdminCollection />} />
+      <Route path="addNew" element={<AddGamesForm />} />
+      <Route path="editGame/:gamesId" element={<EditGameForm />} />
     </Routes>
   );
 };

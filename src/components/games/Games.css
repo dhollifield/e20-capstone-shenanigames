@@ -22,6 +22,11 @@
     height: 46px;
 }
 
+.sortByAZ:hover{background:#FFCA3A; color: black;}
+.sortByAge:hover{background:#FFCA3A; color: black;}
+.sortByTime:hover{background:#FFCA3A; color: black;}
+.sortByPlayers:hover{background:#FFCA3A; color: black;}
+
 .addGameButton {
     background: #E74009;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -32,6 +37,8 @@
     height: 60px;
     margin-top: -10px;
 }
+
+.addGameButton:hover{background:black; color:#E74009}
 
 .gamesContainer {
     display: flex;
@@ -64,6 +71,7 @@
 .gameButtons {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     margin: 0 0 10px 0;
 }
 
@@ -75,7 +83,31 @@
     font-size: 18px;
 }
 
-.deleteGame {
+.addToCollection:hover{background: gray; color: white}
+.addToWishList:hover{background: gray; color: white}
+
+.editGameButton {
+    margin: 5px;
+    background: #1982C4;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    font-size: 18px;
+    width: 260px;
+    height: 27px;
+}
+
+.editGameButton:hover{background: darkgray}
+
+.deleteGameButton {
+    margin: 5px;
     background: #E74009;
     color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    font-size: 18px;
+    width: 260px;
+    height: 27px;
 }
+
+.deleteGameButton:hover{background: darkgray}

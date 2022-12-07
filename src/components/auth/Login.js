@@ -30,11 +30,17 @@ export const Login = () => {
       });
   };
 
-  return (
+  return <>
+
+    <div className="navImgContainer">
+      <h1 className="loginPageTitle">ShenaniGAMES</h1>
+    </div>
+    <div className="tagLine">Explore the Fun World of Tabletop Games!</div>
+  
+  (
     <main className="container--login">
       <section>
         <form className="form--login" onSubmit={handleLogin}>
-          <h1>ShenaniGAMES</h1>
           <h2>Please sign in</h2>
           <fieldset>
             <label htmlFor="inputEmail"> Email address </label>
@@ -49,13 +55,16 @@ export const Login = () => {
             />
           </fieldset>
           <fieldset>
-            <button type="submit">Sign in</button>
+            <button className="submitButton" type="submit">Sign in</button>
           </fieldset>
+          <section className="link--register">
+            <button className="registerButton">
+              <Link to="/register">Not a member yet?</Link>
+            </button>
+          </section>
         </form>
-      </section>
-      <section className="link--register">
-        <Link to="/register">Not a member yet?</Link>
       </section>
     </main>
   );
+  </>
 };

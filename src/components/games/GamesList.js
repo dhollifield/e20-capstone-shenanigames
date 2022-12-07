@@ -1,25 +1,98 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import "./Games.css"
 
 export const GamesList = () => {
     const [games, setGames] = useState([])
+    const [userCollection, setUserCollection] = useState([])
 
     const capstoneUser = localStorage.getItem("capstone_user")
     const gamesUserObject = JSON.parse(capstoneUser)
 
-    useEffect(
-        () => {
-            const fetchGames = async() => {
-                const response = await fetch(`http://localhost:8088/games?_sort=name`)
-                const gamesArray = await response.json()
-                setGames(gamesArray)
-                // setSuggestedAge(gamesArray)
-            }
-            fetchGames()
-        },
-        []
-    )
+    const { userId } = useParams()
+
+    const navigate = useNavigate()
+
+    const fetchGames = async () => {
+        const response = await fetch(
+            `http://localhost:8088/games?_sort=name`
+        );
+        const gamesArray = await response.json();
+        setGames(gamesArray)
+    };
+
+    useEffect(() => {
+        fetchGames();
+    }, []);
+
+    const fetchUserCollection = async () => {
+        const response = await fetch(
+            `http://localhost:8088/userCollection?`
+        );
+        const collectionArray = await response.json();
+        setUserCollection(collectionArray.filter((obj) => obj.userId === gamesUserObject.id))
+    };
+
+    useEffect(() => {
+        fetchUserCollection();
+    }, [userId]);
+
+    console.log(userCollection)
+
+    
+
+    const handleAddToCollectionClick = (gameId) => {
+
+        const dataToSendToAPI = {
+            userId: gamesUserObject.id,
+            gamesId: gameId
+          };
+
+        const addGameToCollection = async () => {
+                const options = {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(dataToSendToAPI),
+                };
+                const response = await fetch(`http://localhost:8088/userCollection`, options);
+                await response.json()
+              };
+              addGameToCollection();
+    }
+
+    const editButton = (gamesId) => {
+        return (
+          <Link to={`/editGame/${gamesId}`}>
+            <button className="gameButton editGameButton">Edit Game</button>                                       
+          </Link>
+        );
+    };
+
+    const deleteButton = (gamesId) => {
+        return (
+        <Link
+            onClick={() => {
+            const deleteGame = async () => {
+                const options = {
+                method: "DELETE",
+                };
+                await fetch(`http://localhost:8088/games/${gamesId}`, options);
+                fetchGames();
+            };
+            deleteGame();
+            navigate(`/`)
+            }}
+        >
+            <button 
+            className="gameButton deleteGameButton"
+            >
+            Delete Game
+            </button>
+        </Link>
+        );
+    };
 
     return (
         <>
@@ -32,7 +105,7 @@ export const GamesList = () => {
             {
                 gamesUserObject.isAdmin
                     ? <>   
-                        <Link to={`/games/addNew`} className="addNewGameLink">
+                        <Link to={`/addNew`} className="addNewGameLink">
                             <button className="addGameButton">ADD A GAME</button>
                         </Link>
                     </>
@@ -55,9 +128,25 @@ export const GamesList = () => {
                                 <p>Playing Time: {game.minPlayingTimeInMinutes}-{game.maxPlayingTimeInMinutes} minutes</p>
                                 <p>Suggested Age: {game.suggestedAge}+</p>
                                 <div className="gameButtons">
-                                    <button className="gameButton addToCollection">Add to Collection</button>
+                                        <button
+                                            className="gameButton addToCollection"
+                                            onClick={() => handleAddToCollectionClick(game.id)}
+                                        >
+                                        Add to Collection
+                                        </button>
                                     <button className="gameButton addToWishList">Add to Wish List</button>
-                                    <button className="gameButton deleteGame">Delete Game</button>
+                                    <div className="gameButtons">
+                                        {gamesUserObject.isAdmin ? (
+                                            <>{editButton(game.id)}</>
+                                        ) : (
+                                        <></>
+                                        )}
+                                        {gamesUserObject.isAdmin ? (
+                                            <>{deleteButton(game.id)}</>
+                                        ) : (
+                                        <></>
+                                        )}
+                                    </div>
                                 </div>
                         </section>
                     }
@@ -67,41 +156,3 @@ export const GamesList = () => {
     </>
     )
 }
-
-// POTENTIAL CODE FOR BUTTONS //
-/* {
-    gamesUserObject.admin
-        ? <>
-            <button onClick={ () => { setSuggestedAge() } }>Sort By Suggested Minimum Age</button>
-            <button onClick={ () => { navigate("/game/create") } }>Add A Game</button>
-        </>
-        : <>
-            <button onClick={ () => { setSuggestedAge() } }>Sort By Suggested Minimum Age</button>
-        </>
-    } */ 
-
-// POTENTIAL CODE FOR FLIP CARD //
-
-/* const handleGameClick =(gamesId) => {
-     setFilteredGames(
-         filteredGames.map((game) =>
-         game.id === `${gamesId}`
-     )
-     );
-   } */
-
-/*{ <div className="gamesContainer">
-<article className="games">
-    {games.map((game) => {
-       return (
-           <section className="game">
-               <GamesDetails 
-                   key={`game--${game.id}`}  
-                   onChangeImage={handleGameClick}
-                   
-               />
-           </section>
-       )
-   })}
-</article>
-</div> }*/

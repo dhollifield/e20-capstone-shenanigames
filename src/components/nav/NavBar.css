@@ -34,3 +34,10 @@
     font-size: larger;
     text-decoration-line: none;
 }
+
+@media screen and (max-width: 600px) {
+    .navBarLinks .navbar__item .navbar__link {
+      float: none;
+      width: 100%;
+    }
+  }

@@ -1,9 +1,11 @@
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './AddGamesForm.css'
+import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import './EditGameForm.css';
 
-export const AddGamesForm = () => {
-    const [newGame, update] = useState({
+export const EditGameForm = () => {
+
+    const [game, setGame] = useState({
         name: '',
         minPlayers: '',
         maxPlayers: '',
@@ -13,19 +15,21 @@ export const AddGamesForm = () => {
         imageURL: '',
     });
 
-    const [games, setGames] = useState([])
-
+    const { gamesId } = useParams();
     const navigate = useNavigate();
 
-    useEffect(() => {
-        const fetchGames = async () => {
-            const response = await fetch (`http://localhost:8088/games`)
-            const gamesArray = await response.json();
-            setGames(gamesArray);
-        };
-        fetchGames();
-    },
-    []);
+    useEffect(
+        () => {
+            const fetchGames = async () => {
+                const response = await fetch(`http://localhost:8088/games?id=${gamesId}`)
+                const game = await response.json()
+                setGame(game[0])
+              }
+              fetchGames()
+              console.log(game)
+        },
+        [gamesId]
+    );
 
     const minPlayerOptions = [
         {
@@ -237,32 +241,24 @@ export const AddGamesForm = () => {
     const handleSaveButtonClick = (event) => {
         event.preventDefault();
 
-        const dataToSendToAPI = {
-            name: newGame.name,
-            minPlayers: newGame.minPlayers,
-            maxPlayers: newGame.maxPlayers,
-            suggestedAge: newGame.suggestedAge,
-            minPlayingTimeInMinutes: newGame.minPlayingTimeInMinutes,
-            maxPlayingTimeInMinutes: newGame.maxPlayingTimeInMinutes,
-            imageURL: newGame.imageURL,
-        };
-
-        return fetch(`http://localhost:8088/games`, {
-            method: 'POST',
+        const saveGame = async () => {
+        const options = {
+            method: "PUT",
             headers: {
-                'Content-Type': 'application/json',
+                "Content-Type": "application/json"
             },
-            body: JSON.stringify(dataToSendToAPI)
-        })
-            .then((response) => response.json())
-            .then(() => {
-                navigate('/');
-            });
+            body: JSON.stringify(game)
+        }
+        const response = await fetch (`http://localhost:8088/games/${game.id}`, options)
+        await response.json()
+        }
+        saveGame()
+        navigate('/')
     }
-
+        
     return (
-        <form className="newGameForm">
-            <h2 className="gamesForm__title">Add Game</h2>
+        <form className="editGameForm">
+            <h2 className="gamesForm__title">Edit Game</h2>
             <fieldset className="gameField">
                 <div className="form-group">
                     <label htmlFor="gameName">Name of Game</label>
@@ -272,11 +268,11 @@ export const AddGamesForm = () => {
                         type="text"
                         className="form-control"
                         placeholder="Name of Game"
-                        value={newGame.name}
+                        value={game.name}
                         onChange={(event) => {
-                            const copy = { ...newGame };
+                            const copy = { ...game };
                             copy.name = event.target.value;
-                            update(copy);
+                            setGame(copy);
                         }} />
                 </div>
             </fieldset>
@@ -286,17 +282,17 @@ export const AddGamesForm = () => {
                     <label htmlFor="minPlayers">Minimum Number of Players</label>
                     <select
                         className="form-control players"
-                        defaultValue={newGame.minPlayers}
+                        value={game.minPlayers}
                         onChange={(event) => {
-                            const copy = { ...newGame };
+                            const copy = { ...game };
                             copy.minPlayers = event.target.value;
-                            update(copy);
+                            setGame(copy);
                         }}
                     >
                         <option value="" disabled selected>-- Choose --</option>
                         {minPlayerOptions.map((option) => {
                             return (
-                                <option className="minPlayers" value={option.value}>
+                                <option className="minPlayers" key={option.value} value={option.value}>
                                     {option.label}
                                 </option>
                             )
@@ -306,17 +302,17 @@ export const AddGamesForm = () => {
                     <label htmlFor="maxPlayers">Maximum Number of Players</label>
                     <select
                         className="form-control form-players"
-                        defaultValue={newGame.maxPlayers}
+                        value={game.maxPlayers}
                         onChange={(event) => {
-                            const copy = { ...newGame };
+                            const copy = { ...game };
                             copy.maxPlayers = event.target.value;
-                            update(copy);
+                            setGame(copy);
                         }}
                     >
                         <option value="" disabled selected>-- Choose --</option>
                         {maxPlayerOptions.map((option) => {
                             return (
-                                <option className="maxPlayers" value={option.value}>
+                                <option className="maxPlayers" key={option.value} value={option.value}>
                                     {option.label}
                                 </option>
                             )
@@ -330,17 +326,17 @@ export const AddGamesForm = () => {
                     <label htmlFor="suggestedAge">Suggested Minimum Age of Players</label>
                     <select
                         className="form-control form-age"
-                        defaultValue={newGame.suggestedAge}
+                        value={game.suggestedAge}
                         onChange={(event) => {
-                            const copy = { ...newGame };
+                            const copy = { ...game };
                             copy.suggestedAge = event.target.value;
-                            update(copy);
+                            setGame(copy);
                         }}
                     >
                         <option value="" disabled selected>-- Choose --</option>
                         {suggestedAgeOptions.map((option) => {
                             return (
-                                <option className="suggestedAge" value={option.value}>
+                                <option className="suggestedAge" key={option.value} value={option.value}>
                                     {option.label}
                                 </option>
                             )
@@ -354,17 +350,17 @@ export const AddGamesForm = () => {
                     <label htmlFor="minPlayingTime">Minimum Playing Time</label>
                     <select
                         className="form-control form-time"
-                        defaultValue={newGame.minPlayingTimeInMinutes}
+                        value={game.minPlayingTimeInMinutes}
                         onChange={(event) => {
-                            const copy = { ...newGame };
+                            const copy = { ...game };
                             copy.minPlayingTimeInMinutes = event.target.value;
-                            update(copy);
+                            setGame(copy);
                         }}
                     >
                         <option value="" disabled selected>-- Choose --</option>
                         {minPlayingTimeOptions.map((option) => {
                             return (
-                                <option className="minPlayeringTime" value={option.value}>
+                                <option className="minPlayingTime" key={option.value} value={option.value}>
                                     {option.label}
                                 </option>
                             )
@@ -374,17 +370,17 @@ export const AddGamesForm = () => {
                     <label htmlFor="maxPlayingTime">Maximum Playing Time</label>
                     <select
                         className="form-control form-time"
-                        defaultValue={newGame.maxPlayingTimeInMinutes}
+                        value={game.maxPlayingTimeInMinutes}
                         onChange={(event) => {
-                            const copy = { ...newGame };
+                            const copy = { ...game };
                             copy.maxPlayingTimeInMinutes = event.target.value;
-                            update(copy);
+                            setGame(copy);
                         }}
                     >
                         <option value="" disabled selected>-- Choose --</option>
                         {maxPlayingTimeOptions.map((option) => {
                             return (
-                                <option className="maxPlayingTime" value={option.value}>
+                                <option className="maxPlayingTime" key={option.value} value={option.value}>
                                     {option.label}
                                 </option>
                             )
@@ -400,11 +396,11 @@ export const AddGamesForm = () => {
                         required
                         autoFocus
                         className="form-control"
-                        value={newGame.imageURL}
+                        value={game.imageURL}
                         onChange={(event) => {
-                        const copy = { ...newGame };
+                        const copy = { ...game };
                         copy.imageURL = event.target.value;
-                        update(copy);
+                        setGame(copy);
                         }}
                     />
                 </div>
@@ -414,7 +410,7 @@ export const AddGamesForm = () => {
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
                 className="btn btn-primary"
             >
-                Submit New Game
+                Save Game
             </button>
         </form>
     );

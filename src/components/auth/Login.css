@@ -1,6 +1,48 @@
-.h1,
-h1 {
-  font-size: 2.5rem;
+.navImgContainer {
+  margin-top: 0;
+  min-height: 350px;
+  max-width: 100%;
+  background-image: url("../nav/header.shenanigames.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.loginPageTitle {
+  position: absolute;
+  width: 1404px;
+  height: 170px;
+  left: 440px;
+  top: 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 170px;
+  line-height: 206px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.);
+}
+
+.tagLine{
+  color: white;
+  background-color: black;
+  text-align: center;
+  font-size: larger;
+  font-stretch: 150%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+}
+
+.container--login{
+  margin: 30px 0 0 0;
+}
+
+h2 {
+  background-color: #FFCA3A;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 fieldset {
@@ -12,8 +54,11 @@ fieldset {
 
 .form--login {
   display: inline-block;
-  margin: 0 auto;
+  background-color: #f6f6f6;
+  margin: auto;
+  padding: 0 25px;
   text-align: left;
+  border-radius: 5px;
 }
 
 .form--login > fieldset > input[type="email"] {
@@ -23,6 +68,7 @@ fieldset {
 .label--login {
   width: 8rem;
   display: inline-block;
+  margin: 20px 0;
 }
 
 .form-control {
@@ -51,13 +97,42 @@ fieldset {
   background-position-x: right;
   z-index: 1;
   min-height: 25rem;
-  min-width: 45rem;
-  background-color: hsla(0, 0%, 100%, 0.4);
+  min-width: 40rem;
+  background-color: hsla(0, 0%, 100%, 0.70);
   background-blend-mode: overlay;
   background-repeat: no-repeat;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .button--close {
   position: relative;
   bottom: -2rem;
 }
+
+.submitButton {
+  font-family: 'Merriweather', serif;
+  font-size: 15px;
+  transition: 0.3s;
+  padding: 5px 10px;
+  margin: 10px 0 0 0;
+}
+
+.submitButton:hover{background-color: #1982C4; color: white;}
+
+a {
+  font-family: 'Merriweather', serif;
+  text-decoration-line: none;
+  color: black;
+  font-size: 15px;
+}
+
+.registerButton {
+  margin: 30px 0 0 0;
+  padding: 5px 10px;
+}
+
+.submitButton:hover{background-color: #E74009}
+
+a:hover{color: #E74009}
+
+

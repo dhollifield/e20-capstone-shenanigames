@@ -1,0 +1,80 @@
+.pageTitle {
+    font-size: 110px;
+    text-align: center;
+    margin: 20px;
+}
+
+.pageButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.sortButton {
+    background: #1982C4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    width: 230px;
+    height: 46px;
+}
+
+.addGameButton {
+    background: #E74009;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    color: white;
+    font-size: 25px;
+    width: 230px;
+    height: 60px;
+    margin-top: -10px;
+}
+
+.gamesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.game {
+    background: #FFCA3A;
+    border: 5px solid black;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 0 10px;
+    max-width: min-content;
+}
+
+.gameImage {
+    position: sticky; 
+    width: 270px;
+    height: 234px;
+    padding: 5px 0;
+}
+
+.gameName {
+    font-size: 25px;
+    text-align: center;    
+}
+
+.gameButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 0 10px 0;
+}
+
+.deleteButton {
+    margin: 5px;
+    background: #E74009;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    font-size: 18px;
+    width: 260px;
+    height: 27px;
+}

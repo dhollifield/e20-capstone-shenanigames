@@ -1,0 +1,37 @@
+:root {
+    --card-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.6);
+  }
+  .editGameForm {
+    width: 800px;
+    background-color: #FFCA3A;
+    color: black;
+    margin: 50px auto;
+    border: 1px solid #0075a1;
+    border-radius: 2%;
+    padding: 20px 20px;
+    box-shadow: var(--card-shadow);
+  }
+  
+  .gameField {
+    background-color: #f2f2f0;
+    color: black;
+    border: 1px solid black;
+    border-radius: 2%;
+    padding: 10px 20px;
+    margin: 20px;
+  }
+  
+  .btn-primary {
+    padding: 10px 20px;
+    margin: 0 0 10px 20px;
+    background-color: black;
+    color: white;
+    letter-spacing: .07em;
+    text-decoration: none;
+    border: black;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  
+  .btn-primary:hover{opacity:1; background-color: #E74009}
+  
