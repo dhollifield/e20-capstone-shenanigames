@@ -22,7 +22,7 @@
   align-items: center;
   text-align: right;
   color: #FFFFFF;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 2);
 }
 
 .tagLine{
@@ -133,6 +133,6 @@ a {
 
 .submitButton:hover{background-color: #E74009}
 
-a:hover{color: #E74009}
+a:hover{background-color: black; color: #FFCA3A}
 
 

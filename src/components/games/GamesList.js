@@ -58,8 +58,39 @@ export const GamesList = () => {
                 };
                 const response = await fetch(`http://localhost:8088/userCollection`, options);
                 await response.json()
+                if (gamesUserObject.isAdmin) {
+                    navigate('/adminCollection')
+                } else {
+                    navigate('/userCollection')
+                }
               };
               addGameToCollection();
+    }
+
+    const handleAddToWishListClick = (gameId) => {
+
+        const dataToSendToAPI = {
+            userId: gamesUserObject.id,
+            gamesId: gameId
+          };
+
+        const addGameToWishList = async () => {
+                const options = {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(dataToSendToAPI),
+                };
+                const response = await fetch(`http://localhost:8088/userWishlist`, options);
+                await response.json()
+                if (gamesUserObject.isAdmin) {
+                    navigate('/adminWishlist')
+                } else {
+                    navigate('/userWishlist')
+                }
+              };
+              addGameToWishList();
     }
 
     const editButton = (gamesId) => {
@@ -134,7 +165,12 @@ export const GamesList = () => {
                                         >
                                         Add to Collection
                                         </button>
-                                    <button className="gameButton addToWishList">Add to Wish List</button>
+                                        <button
+                                            className="gameButton addToWishList"
+                                            onClick={() => handleAddToWishListClick(game.id)}
+                                        >
+                                        Add to Wish List
+                                        </button>
                                     <div className="gameButtons">
                                         {gamesUserObject.isAdmin ? (
                                             <>{editButton(game.id)}</>

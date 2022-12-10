@@ -1,10 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "./Collection.css"
+import "./WishList.css"
 
-export const UserCollection = () => {
-    const [userCollection, setUserCollection] = useState([]);
+export const AdminWishList = () => {
+    const [userWishlist, setUserWishlist] = useState([]);
     const [sortedByAlpha, setSortedByAlpha] = useState([])
 
     const { gamesId, userId } = useParams();
@@ -12,21 +12,21 @@ export const UserCollection = () => {
     const capstoneUser = localStorage.getItem("capstone_user")
     const gamesUserObject = JSON.parse(capstoneUser)
 
-    const fetchCollection = () => {
-        fetch(`http://localhost:8088/userCollection?&_expand=games`)
+    const fetchWishlist = () => {
+        fetch(`http://localhost:8088/userWishlist?&_expand=games`)
         .then((response) => response.json())
         .then((userGamesArray) => {
-            setUserCollection(userGamesArray.filter((obj) => obj.userId == gamesUserObject.id));
+            setUserWishlist(userGamesArray.filter((obj) => obj.userId == gamesUserObject.id));
         });
     };
 
     useEffect(() => {
-        fetchCollection();
+        fetchWishlist();
     }, [userId, gamesId]);
 
     useEffect(
         () => {
-            const sortedByAlpha = userCollection.sort((a, b) => {
+            const sortedByAlpha = userWishlist.sort((a, b) => {
                 if (a.games.name < b.games.name) {
                     return -1;
                 } if (a.games.name > b.games.name) {
@@ -36,23 +36,23 @@ export const UserCollection = () => {
             })
             setSortedByAlpha(sortedByAlpha)
         }, 
-        [userCollection]
+        [userWishlist]
     )
 
     const removeButtonClick = (id) => {
-        return fetch(`http://localhost:8088/userCollection/${id}`, {
+        return fetch(`http://localhost:8088/userWishlist/${id}`, {
             method: "DELETE",
             headers: {
                 "Content-type": "application/json",
             },
         }).then((response) => {
-            fetchCollection();
+            fetchWishlist();
         });
     };
  
     return (
         <>
-        <div className="pageTitle">MY COLLECTION</div>
+        <div className="pageTitle">MY WISH LIST</div>
 
         <div className="pageButtons">
             <button 
@@ -60,7 +60,7 @@ export const UserCollection = () => {
                 onClick= {() =>
                 sortedByAlpha()}>
                     Sort by A-Z
-                </button>
+            </button>
             <button className="sortButton sortByAge">Sort by Suggested Age</button>
             <button className="sortButton sortByTime">Sort by Playing Time</button>
             <button className="sortButton sortByPlayers">Sort by Number of Players</button>
@@ -68,20 +68,20 @@ export const UserCollection = () => {
 
         <article className="gamesContainer">
             {
-                userCollection.map(
-                    (collection) => {
-                        return <section className="game" key={`game--${collection.games.id}`}>
-                                <img className="gameImage" src={collection.games.imageURL} alt="game"></img>
-                                <div className="gameName">{collection.games.name}</div>
-                                <p>Number of Players: {collection.games.minPlayers}-{collection.games.maxPlayers}</p>
-                                <p>Playing Time: {collection.games.minPlayingTimeInMinutes}-{collection.games.maxPlayingTimeInMinutes} minutes</p>
-                                <p>Suggested Age: {collection.games.suggestedAge}+</p>
+                userWishlist.map(
+                    (list) => {
+                        return <section className="game" key={`game--${list.games.id}`}>
+                                <img className="gameImage" src={list.games.imageURL} alt="game"></img>
+                                <div className="gameName">{list.games.name}</div>
+                                <p>Number of Players: {list.games.minPlayers}-{list.games.maxPlayers}</p>
+                                <p>Playing Time: {list.games.minPlayingTimeInMinutes}-{list.games.maxPlayingTimeInMinutes} minutes</p>
+                                <p>Suggested Age: {list.games.suggestedAge}+</p>
                                 <div className="gameButtons">
-                                <button 
+                                    <button 
                                         className="deleteButton"
                                         onClick= {() => 
-                                        removeButtonClick(collection.id)}>
-                                            Remove from Collection
+                                        removeButtonClick(list.id)}>
+                                            Remove from Wish List
                                     </button>
                                 </div>
                         </section>

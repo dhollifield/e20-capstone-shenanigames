@@ -7,6 +7,7 @@
       "lastName": "Hollifield",
       "cityName": "Thompsons Station",
       "stateName": "TN",
+      "profilePic": "https://pbs.twimg.com/profile_images/1568411916296495104/AFKI-SWL_400x400.jpg",
       "id": 1
     },
     {
@@ -16,6 +17,7 @@
       "lastName": "Clanton",
       "cityName": "Cookeville",
       "stateName": "TN",
+      "profilePic": "https://randomuser.me/api/portraits/women/3.jpg",
       "id": 2
     },
     {
@@ -25,6 +27,7 @@
       "lastName": "Newbill",
       "cityName": "Little Rock",
       "stateName": "AR",
+      "profilePic": "https://randomuser.me/api/portraits/women/9.jpg",
       "id": 3
     },
     {
@@ -34,6 +37,7 @@
       "lastName": "Swig",
       "cityName": "Oklahoma City",
       "stateName": "OK",
+      "profilePic": "https://randomuser.me/api/portraits/men/40.jpg",
       "id": 4
     },
     {
@@ -43,6 +47,7 @@
       "lastName": "Hollifield",
       "cityName": "Thompsons Station",
       "stateName": "TN",
+      "profilePic": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/267494046_10229510220726255_5015553397933828770_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=e8-6482YQgcAX-agbuQ&_nc_ht=scontent-atl3-2.xx&oh=00_AfDAr72TvRlqFNRUQC_sOeouobiuxo2dN7Y7aWUI9jUkWg&oe=6399CC2A",
       "id": 5
     },
     {
@@ -52,7 +57,39 @@
       "lastName": "Kilgore",
       "cityName": "Nashville",
       "stateName": "TN",
+      "profilePic": "https://scontent-atl3-2.xx.fbcdn.net/v/t1.6435-9/53548586_10156666201070189_2231916842409000960_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=56-eqSzzrYQAX-9dbYV&_nc_ht=scontent-atl3-2.xx&oh=00_AfCERsrFNtIC1tjpNkxzoFy_hWyfrCQVQ6-uM2snVo2cRw&oe=63BB6934",
       "id": 6
+    },
+    {
+      "email": "strusty@amgen.com",
+      "firstName": "Sophia",
+      "lastName": "Trusty",
+      "cityName": "Nashville",
+      "stateName": "TN",
+      "profilePic": "https://randomuser.me/api/portraits/women/92.jpg",
+      "isAdmin": false,
+      "id": 7
+    },
+    {
+      "email": "mscott@dundermifflin.com",
+      "firstName": "Michael",
+      "lastName": "Scott",
+      "cityName": "Scranton",
+      "stateName": "PA",
+      "isAdmin": false,
+      "profilePic": "https://pbs.twimg.com/profile_images/1234183399193161728/HgBi7HhO_400x400.jpg",
+      "id": 8
+    },
+    {
+      "email": "ahollifield@rapaportdiamonds.com",
+      "firstName": "Audrey",
+      "lastName": "Hollifield",
+      "cityName": "New York City",
+      "stateName": "NY",
+      "sex": "",
+      "profilePic": "https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/312208623_10166957202905375_2003991306549309548_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=IAwTxmL-lZkAX-1F60R&_nc_ht=scontent-atl3-2.xx&oh=00_AfAuVnTnyknIlbV_ajF0YKK7zNzzI9mOXCiRRqr7qvhgzA&oe=63992C95",
+      "isAdmin": false,
+      "id": 9
     }
   ],
   "games": [
@@ -302,33 +339,118 @@
       "id": 3,
       "userId": 2,
       "gamesId": 3
-    }, 
+    },
     {
-      "id": 4,
+      "userId": 4,
+      "gamesId": 5,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "gamesId": 22,
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "gamesId": 12,
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "gamesId": 19,
+      "id": 9
+    },
+    {
       "userId": 2,
-      "gamesId": 4
+      "gamesId": 20,
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "gamesId": 20,
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "gamesId": 9,
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "gamesId": 16,
+      "id": 15
+    },
+    {
+      "userId": 1,
+      "gamesId": 10,
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "gamesId": 17,
+      "id": 17
+    },
+    {
+      "userId": 1,
+      "gamesId": 3,
+      "id": 19
+    },
+    {
+      "userId": 1,
+      "gamesId": 18,
+      "id": 21
+    },
+    {
+      "userId": 1,
+      "gamesId": 15,
+      "id": 22
+    },
+    {
+      "userId": 2,
+      "gamesId": 2,
+      "id": 23
+    },
+    {
+      "userId": 2,
+      "gamesId": 13,
+      "id": 25
+    },
+    {
+      "userId": 2,
+      "gamesId": 7,
+      "id": 26
+    },
+    {
+      "userId": 5,
+      "gamesId": 1,
+      "id": 27
     }
   ],
   "userWishlist": [
-    {
-      "id": 1,
-      "userId": 1,
-      "gamesId": 3
-    },
     {
       "id": 2,
       "userId": 1,
       "gamesId": 4
     },
     {
-      "id": 3,
-      "userId": 2,
-      "gamesId": 1
+      "userId": 1,
+      "gamesId": 11,
+      "id": 5
     },
     {
-      "id": 4,
       "userId": 2,
-      "gamesId": 2
+      "gamesId": 24,
+      "id": 6
+    },
+    {
+      "userId": 2,
+      "gamesId": 22,
+      "id": 7
+    },
+    {
+      "userId": 5,
+      "gamesId": 18,
+      "id": 8
     }
   ]
 }

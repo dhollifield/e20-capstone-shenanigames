@@ -25,50 +25,29 @@ export const CommunityList = () => {
         );
     };
 
-    // const deleteButton = (gamesId) => {
-    //     return (
-    //     <Link
-    //         onClick={() => {
-    //         const deleteGame = async () => {
-    //             const options = {
-    //             method: "DELETE",
-    //             };
-    //             await fetch(`http://localhost:8088/games/${gamesId}`, options);
-    //             fetchGames();
-    //         };
-    //         deleteGame();
-    //         navigate(`/`)
-    //         }}
-    //     >
-    //         <button 
-    //         className="gameButton deleteGameButton"
-    //         >
-    //         Delete Game
-    //         </button>
-    //     </Link>
-    //     );
-    // };
-
     return (
         <>
+            <div className="pageTitle">OUR COMMUNITY</div>
 
-
-        <article className="gamesContainer">
-            {
-                users.map(
-                    (user) => {
-                        return <section className="user" key={`user--${user.id}`}>
-                                <div className="userName">{user.firstName} {user.lastName}</div>
-                                <p>Location: {user.cityName}, {user.stateName}</p>
-                                <div className="userCollectionButton" >
-                                    <>{goToCollectionButton(user.id)}</>
-                                </div>
-                                
-                        </section>
-                    }
-                )
-            }
-        </article>
-    </>
+            <article className="profilesContainer">
+                {
+                    users.map(
+                        (user) => {
+                            return <section className="user" key={`user--${user.id}`}>
+                                    <img className="profilePic" src={user.profilePic} alt="Picture Not Available"></img>
+                                    <div className="userInfo">
+                                        <div className="userName">{user.firstName} {user.lastName}</div>
+                                        <p>Location: {user.cityName}, {user.stateName}</p>
+                                    </div>
+                                    <div className="userCollectionButton" >
+                                        <>{goToCollectionButton(user.id)}</>
+                                    </div>
+                                    
+                            </section>
+                        }
+                    )
+                }
+            </article>
+        </>
     )
 }
