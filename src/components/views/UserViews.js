@@ -1,5 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
+import { UserCollection } from '../collection/UserCollection';
+import { CommunityList } from '../community/CommunityList';
 import { GamesList } from "../games/GamesList";
+import { UserWishList } from '../wishlist/UserWishList';
 
 export const UserViews = () => {
   return (
@@ -12,6 +15,9 @@ export const UserViews = () => {
           </>
         }
       ></Route>
+      <Route path="community" element={<CommunityList />} />
+      <Route path="userCollection" element={<UserCollection />} />
+      <Route path="userWishlist" element={<UserWishList />} />
     </Routes>
   );
 };

@@ -35,7 +35,7 @@ export const Login = () => {
     <div className="navImgContainer">
       <h1 className="loginPageTitle">ShenaniGAMES</h1>
     </div>
-    <div className="tagLine">Explore the Fun World of Tabletop Games!</div>
+    <div className="tagLine">Explore the Fun World of Tabletop Games</div>
   
   (
     <main className="container--login">

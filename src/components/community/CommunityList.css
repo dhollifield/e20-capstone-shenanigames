@@ -4,3 +4,21 @@
     margin: 20px;
 }
 
+.profilesContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+.user {
+    background-color: #1982C4;
+    margin: 20px;
+    padding: 10px;
+}
+.profilePic {
+    float: left;
+    width:  100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}

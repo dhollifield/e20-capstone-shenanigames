@@ -5,9 +5,15 @@ import "./Login.css";
 export const Register = (props) => {
   const [user, setUser] = useState({
     email: "",
-    fullName: "",
+    firstName: "",
+    lastName: "",
+    cityName: "",
+    stateName: "",
+    sex: "",
+    profilePic: "",
     isAdmin: false,
   });
+
   let navigate = useNavigate();
 
   const registerNewUser = () => {
@@ -94,7 +100,7 @@ export const Register = (props) => {
           />
         </fieldset>
         <fieldset>
-          <label htmlFor="email"> City </label>
+          <label htmlFor="cityName"> City </label>
           <input
             onChange={updateUser}
             type="text"
@@ -105,7 +111,7 @@ export const Register = (props) => {
           />
         </fieldset>
         <fieldset>
-          <label htmlFor="email"> State </label>
+          <label htmlFor="stateName"> State </label>
           <input
             onChange={updateUser}
             type="text"
@@ -113,6 +119,17 @@ export const Register = (props) => {
             className="form-control"
             placeholder="State"
             required
+          />
+        </fieldset>
+        <fieldset>
+          <label htmlFor="profilePic"> Profile Image </label>
+          <input
+              onChange={updateUser}
+              type="text"
+              id="profilePic"
+              className="form-control"
+              placeholder="Image URL"
+              required
           />
         </fieldset>
         <fieldset>

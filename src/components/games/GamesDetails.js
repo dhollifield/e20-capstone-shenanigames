@@ -1,3 +1,5 @@
+//* This is an unused component for making a flip component for GamesList *//
+
 import { useEffect, useState } from "react";
 import ReactCardFlip from "react-card-flip"
 

@@ -408,7 +408,7 @@ export const AddGamesForm = () => {
                         }}
                     />
                 </div>
-      </fieldset>
+            </fieldset>
 
             <button
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
