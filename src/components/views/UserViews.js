@@ -18,6 +18,8 @@ export const UserViews = () => {
       <Route path="community" element={<CommunityList />} />
       <Route path="userCollection" element={<UserCollection />} />
       <Route path="userWishlist" element={<UserWishList />} />
+      <Route path="userWishlist/:userId" element={<UserWishList />} />
+      <Route path="userCollection/:userId" element={<UserCollection />} />
     </Routes>
   );
 };

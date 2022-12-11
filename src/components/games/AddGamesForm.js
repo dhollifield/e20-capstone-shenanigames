@@ -190,8 +190,8 @@ export const AddGamesForm = () => {
             value: "150"
         },
         {
-            label: "180+",
-            value: "180+"
+            label: "180",
+            value: "180"
         }
     ]
 
