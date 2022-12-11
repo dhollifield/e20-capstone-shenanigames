@@ -25,6 +25,14 @@ export const CommunityList = () => {
         );
     };
 
+    const goToWishListButton = (id) => {
+        return (
+          <Link to={`/userWishlist/${id}`}>
+            <button className="gameButton goToWishListButton">See Wish List</button>                                       
+          </Link>
+        );
+    };
+
     return (
         <>
             <div className="pageTitle">OUR COMMUNITY</div>
@@ -34,15 +42,17 @@ export const CommunityList = () => {
                     users.map(
                         (user) => {
                             return <section className="user" key={`user--${user.id}`}>
-                                    <img className="profilePic" src={user.profilePic} alt="Picture Not Available"></img>
-                                    <div className="userInfo">
-                                        <div className="userName">{user.firstName} {user.lastName}</div>
-                                        <p>Location: {user.cityName}, {user.stateName}</p>
+                                    <div className="userDetails">
+                                        <img className="profilePic" src={user.profilePic} alt="Picture Not Available"></img>
+                                        <div className="userInfo">
+                                            <div className="userName">{user.firstName} {user.lastName}</div>
+                                            <p>Location: {user.cityName}, {user.stateName}</p>
+                                        </div>
+                                        <div className="goToButtons">
+                                            <>{goToCollectionButton(user.id)}</>
+                                            <>{goToWishListButton(user.id)}</>
+                                        </div>
                                     </div>
-                                    <div className="userCollectionButton" >
-                                        <>{goToCollectionButton(user.id)}</>
-                                    </div>
-                                    
                             </section>
                         }
                     )

@@ -322,6 +322,256 @@
       "maxPlayingTimeInMinutes": "90",
       "imageURL": "https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__imagepage/img/uIjeoKgHMcRtzRSR4MoUYl3nXxs=/fit-in/900x600/filters:no_upscale():strip_icc()/pic4458123.jpg",
       "id": 25
+    },
+    {
+      "name": "Wavelength",
+      "minPlayers": "2",
+      "maxPlayers": "10+",
+      "suggestedAge": "14",
+      "minPlayingTimeInMinutes": "30",
+      "maxPlayingTimeInMinutes": "45",
+      "imageURL": "https://cf.geekdo-images.com/z4fbPdmJg_5yphJEvql4ZA__imagepage/img/V_3GqWteqDmL8C3ZLRoDXbJKKRo=/fit-in/900x600/filters:no_upscale():strip_icc()/pic4552862.png",
+      "id": 26
+    },
+    {
+      "name": "Linkee",
+      "minPlayers": "2",
+      "maxPlayers": "10+",
+      "suggestedAge": "14",
+      "minPlayingTimeInMinutes": "30",
+      "maxPlayingTimeInMinutes": "45",
+      "imageURL": "https://cf.geekdo-images.com/8qh1V4TIn1vGecr5cB-ZSQ__imagepage/img/c1DVg9XBBEsDjQzo1hJ4QQjsfag=/fit-in/900x600/filters:no_upscale():strip_icc()/pic4820668.png",
+      "id": 27
+    },
+    {
+      "name": "Scrabble",
+      "minPlayers": "2",
+      "maxPlayers": "4",
+      "suggestedAge": "10",
+      "minPlayingTimeInMinutes": "60",
+      "maxPlayingTimeInMinutes": "90",
+      "imageURL": "https://cf.geekdo-images.com/mVmmntn2oQd0PfFrWBvwIQ__imagepage/img/jMu8xW0e_AZpYaBmZN0IRm04jKQ=/fit-in/900x600/filters:no_upscale():strip_icc()/pic404651.jpg",
+      "id": 28
+    },
+    {
+      "name": "Sorry!",
+      "minPlayers": "2",
+      "maxPlayers": "4",
+      "suggestedAge": "6",
+      "minPlayingTimeInMinutes": "30",
+      "maxPlayingTimeInMinutes": "45",
+      "imageURL": "https://cf.geekdo-images.com/HjA3y6QIJ-OEBHbYIUSMCw__imagepage/img/2zYAwuzWZPgvtj9xmgluNojqDW4=/fit-in/900x600/filters:no_upscale():strip_icc()/pic1187187.jpg",
+      "id": 29
+    },
+    {
+      "name": "The Game of Life",
+      "minPlayers": "2",
+      "maxPlayers": "6",
+      "suggestedAge": "8",
+      "minPlayingTimeInMinutes": "60",
+      "maxPlayingTimeInMinutes": "90",
+      "imageURL": "https://cf.geekdo-images.com/c4S2XDRb_DCYCAV-ZAzDpg__imagepage/img/w6c1ugeBPWsIC5d-nX9vHZ4l0jo=/fit-in/900x600/filters:no_upscale():strip_icc()/pic288405.jpg",
+      "id": 30
+    },
+    {
+      "name": "Monopoly",
+      "minPlayers": "2",
+      "maxPlayers": "8",
+      "suggestedAge": "8",
+      "minPlayingTimeInMinutes": "60",
+      "maxPlayingTimeInMinutes": "180",
+      "imageURL": "https://cf.geekdo-images.com/9nGoBZ0MRbi6rdH47sj2Qg__imagepage/img/lxE4vGa3ef8a4brTRnvxGurt8I0=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5786795.jpg",
+      "id": 31
+    },
+    {
+      "name": "7 Wonders Duel",
+      "minPlayers": "2",
+      "maxPlayers": "2",
+      "suggestedAge": "10",
+      "minPlayingTimeInMinutes": "30",
+      "maxPlayingTimeInMinutes": "45",
+      "imageURL": "https://cf.geekdo-images.com/zdagMskTF7wJBPjX74XsRw__imagepage/img/HdJ4d4O1P89V4UIhZnL3zoYnjow=/fit-in/900x600/filters:no_upscale():strip_icc()/pic2576399.jpg",
+      "id": 32
+    },
+    {
+      "name": "Pandemic Legacy: Season 1",
+      "minPlayers": "2",
+      "maxPlayers": "4",
+      "suggestedAge": "13",
+      "minPlayingTimeInMinutes": "60",
+      "maxPlayingTimeInMinutes": "90",
+      "imageURL": "https://cf.geekdo-images.com/-Qer2BBPG7qGGDu6KcVDIw__imagepage/img/qZybAu8uJ9_sZlU2A65DIF6Y2Zw=/fit-in/900x600/filters:no_upscale():strip_icc()/pic2452831.png",
+      "id": 33
+    },
+    {
+      "name": "Mansions of Madness",
+      "minPlayers": "2",
+      "maxPlayers": "5",
+      "suggestedAge": "13",
+      "minPlayingTimeInMinutes": "120",
+      "maxPlayingTimeInMinutes": "180",
+      "imageURL": "https://cf.geekdo-images.com/JtjGOgkaIxnLUeoV56cWFQ__imagepage/img/mdwAZkhgv48okMZg7kDtIJtdtNA=/fit-in/900x600/filters:no_upscale():strip_icc()/pic814011.jpg",
+      "id": 34
+    },
+    {
+      "name": "Arkham Horror",
+      "minPlayers": "1",
+      "maxPlayers": "8",
+      "suggestedAge": "14",
+      "minPlayingTimeInMinutes": "120",
+      "maxPlayingTimeInMinutes": "240+",
+      "imageURL": "https://cf.geekdo-images.com/9cJf4kd_HZQo6NunfJlo9w__imagepage/img/4fGg2gHz6qyElFGShhz5LOUjxuU=/fit-in/900x600/filters:no_upscale():strip_icc()/pic175966.jpg",
+      "id": 35
+    },
+    {
+      "name": "Twilight Imperium",
+      "minPlayers": "2",
+      "maxPlayers": "6",
+      "suggestedAge": "12",
+      "minPlayingTimeInMinutes": "180",
+      "maxPlayingTimeInMinutes": "240+",
+      "imageURL": "https://cf.geekdo-images.com/4CEaXqehBHS4JCPGMDfnsg__imagepage/img/fSXHC8QB_6R5oXKjeXLwlAdBMfI=/fit-in/900x600/filters:no_upscale():strip_icc()/pic857.jpg",
+      "id": 36
+    },
+    {
+      "name": "Viticulture",
+      "minPlayers": "2",
+      "maxPlayers": "6",
+      "suggestedAge": "13",
+      "minPlayingTimeInMinutes": "90",
+      "maxPlayingTimeInMinutes": "120",
+      "imageURL": "https://cf.geekdo-images.com/WrnWFA1Sysm3-nQyBe1sUA__imagepage/img/bIXVqEFYoQM68eOHsgPvzGhlxls=/fit-in/900x600/filters:no_upscale():strip_icc()/pic2619743.jpg",
+      "id": 37
+    },
+    {
+      "name": "Mysterium",
+      "minPlayers": "2",
+      "maxPlayers": "7",
+      "suggestedAge": "10",
+      "minPlayingTimeInMinutes": "45",
+      "maxPlayingTimeInMinutes": "60",
+      "imageURL": "https://cf.geekdo-images.com/wfeAiLK5n5hD1omhnlYLLA__imagepage/img/FAbfi09ZD0NHVa9psSeSrBZPgms=/fit-in/900x600/filters:no_upscale():strip_icc()/pic2601683.jpg",
+      "id": 38
+    },
+    {
+      "name": "Axis & Allies",
+      "minPlayers": "2",
+      "maxPlayers": "5",
+      "suggestedAge": "12",
+      "minPlayingTimeInMinutes": "180",
+      "maxPlayingTimeInMinutes": "210",
+      "imageURL": "https://cf.geekdo-images.com/pWUe-w4DpXdcmH6GqbZqCw__imagepage/img/GiJHnnO0tFcjq-SioONSVcrVVhY=/fit-in/900x600/filters:no_upscale():strip_icc()/pic24006.jpg",
+      "id": 39
+    },
+    {
+      "name": "Scythe",
+      "minPlayers": "1",
+      "maxPlayers": "5",
+      "suggestedAge": "14",
+      "minPlayingTimeInMinutes": "90",
+      "maxPlayingTimeInMinutes": "120",
+      "imageURL": "https://cf.geekdo-images.com/7k_nOxpO9OGIjhLq2BUZdA__imagepage/img/zoz-t_z9nqqxL7OwQenbqp9PRl8=/fit-in/900x600/filters:no_upscale():strip_icc()/pic3163924.jpg",
+      "id": 40
+    },
+    {
+      "name": "Apples to Apples",
+      "minPlayers": "4",
+      "maxPlayers": "10+",
+      "suggestedAge": "12",
+      "minPlayingTimeInMinutes": "30",
+      "maxPlayingTimeInMinutes": "45",
+      "imageURL": "https://cf.geekdo-images.com/S5GzB_f2Re3kEDoSxqG5Ew__imagepage/img/JBHOsZJ01VEhO4-m-BlA0p0WN_k=/fit-in/900x600/filters:no_upscale():strip_icc()/pic213515.jpg",
+      "id": 41
+    },
+    {
+      "name": "Taboo",
+      "minPlayers": "4",
+      "maxPlayers": "10+",
+      "suggestedAge": "12",
+      "minPlayingTimeInMinutes": "15",
+      "maxPlayingTimeInMinutes": "30",
+      "imageURL": "https://cf.geekdo-images.com/e8wVvax1VqQkgCu_AST5Aw__imagepage/img/N2F-Ul9aZMG-86YGJe8NkZP08BE=/fit-in/900x600/filters:no_upscale():strip_icc()/pic212946.jpg",
+      "id": 42
+    },
+    {
+      "name": "What Do You Meme?",
+      "minPlayers": "3",
+      "maxPlayers": "10+",
+      "suggestedAge": "17",
+      "minPlayingTimeInMinutes": "30",
+      "maxPlayingTimeInMinutes": "90",
+      "imageURL": "https://cf.geekdo-images.com/5Pmk8PrpMHPMg0hG8fJz9w__imagepage/img/cCVLnA23lUzKCb3FvkdHVJhN0XU=/fit-in/900x600/filters:no_upscale():strip_icc()/pic3749720.png",
+      "id": 43
+    },
+    {
+      "name": "Cards Against Humanity",
+      "minPlayers": "4",
+      "maxPlayers": "10+",
+      "suggestedAge": "17",
+      "minPlayingTimeInMinutes": "30",
+      "maxPlayingTimeInMinutes": "45",
+      "imageURL": "https://cf.geekdo-images.com/a2XK61k_lynHXPv7wCJ6cg__imagepage/img/-AgSzV2iH3bsWg9wmRnMCqhA8-M=/fit-in/900x600/filters:no_upscale():strip_icc()/pic2818133.png",
+      "id": 44
+    },
+    {
+      "name": "Everdell",
+      "minPlayers": "1",
+      "maxPlayers": "4",
+      "suggestedAge": "13",
+      "minPlayingTimeInMinutes": "45",
+      "maxPlayingTimeInMinutes": "90",
+      "imageURL": "https://cf.geekdo-images.com/fjE7V5LNq31yVEW_yuqI-Q__imagepage/img/ijYTk6KGtxLRdIvLsGar13ZHs4c=/fit-in/900x600/filters:no_upscale():strip_icc()/pic3918905.png",
+      "id": 45
+    },
+    {
+      "name": "Tiletum",
+      "minPlayers": "1",
+      "maxPlayers": "4",
+      "suggestedAge": "14",
+      "minPlayingTimeInMinutes": "60",
+      "maxPlayingTimeInMinutes": "120",
+      "imageURL": "https://cf.geekdo-images.com/YdnQwUpUnyhM_DByMg5qRQ__imagepage/img/Rs-qX645a9TIyMT-sSvzIXgPTWM=/fit-in/900x600/filters:no_upscale():strip_icc()/pic6792853.png",
+      "id": 46
+    },
+    {
+      "name": "Sol: Last Days of a Star",
+      "minPlayers": "1",
+      "maxPlayers": "5",
+      "suggestedAge": "10",
+      "minPlayingTimeInMinutes": "45",
+      "maxPlayingTimeInMinutes": "90",
+      "imageURL": "https://cf.geekdo-images.com/CM-EwyfkFVYK67SOqEsDdA__imagepage/img/Vp3c22Z-Yz5mbFdislTZwsK8f-Q=/fit-in/900x600/filters:no_upscale():strip_icc()/pic2656553.png",
+      "id": 47
+    },
+    {
+      "name": "Pax Hispanica",
+      "minPlayers": "1",
+      "maxPlayers": "5",
+      "suggestedAge": "14",
+      "minPlayingTimeInMinutes": "60",
+      "maxPlayingTimeInMinutes": "150",
+      "imageURL": "https://cf.geekdo-images.com/5vBPv-QU-yGxMPHhKHA4nQ__imagepage/img/zJQygEA4FC3r4RsE-HntQD1Wlj4=/fit-in/900x600/filters:no_upscale():strip_icc()/pic7208510.jpg",
+      "id": 48
+    },
+    {
+      "name": "Heat",
+      "minPlayers": "1",
+      "maxPlayers": "6",
+      "suggestedAge": "10",
+      "minPlayingTimeInMinutes": "30",
+      "maxPlayingTimeInMinutes": "60",
+      "imageURL": "https://cf.geekdo-images.com/-vOrd4bOspibyohYExLqWg__imagepage/img/k4uPIqjYuWBzofFiCyjSWN6KJow=/fit-in/900x600/filters:no_upscale():strip_icc()/pic6940449.png",
+      "id": 49
+    },
+    {
+      "name": "Aeon Trespass: Odyssey",
+      "minPlayers": "1",
+      "maxPlayers": "4",
+      "suggestedAge": "12",
+      "minPlayingTimeInMinutes": "90",
+      "maxPlayingTimeInMinutes": "120",
+      "imageURL": "https://cf.geekdo-images.com/l5vgu2EcX8qm7_p9zhROuQ__imagepage/img/J2UX3OwZDoYo8uNrIdRKWQPvZFc=/fit-in/900x600/filters:no_upscale():strip_icc()/pic4874391.jpg",
+      "id": 50
     }
   ],
   "userCollection": [
@@ -424,6 +674,26 @@
       "userId": 5,
       "gamesId": 1,
       "id": 27
+    },
+    {
+      "userId": 1,
+      "gamesId": 31,
+      "id": 28
+    },
+    {
+      "userId": 1,
+      "gamesId": 28,
+      "id": 29
+    },
+    {
+      "userId": 1,
+      "gamesId": 8,
+      "id": 30
+    },
+    {
+      "userId": 1,
+      "gamesId": 44,
+      "id": 31
     }
   ],
   "userWishlist": [
