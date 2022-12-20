@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: row;
     position: absolute;
-    right: 20px;
+    right: 28px;
 }
 
 .navbar__item {
@@ -31,13 +31,13 @@
 
 .navbar__link {
     color: white;
-    font-size: larger;
+    font-size: 18px;
     text-decoration-line: none;
 }
 
 @media screen and (max-width: 600px) {
     .navBarLinks .navbar__item .navbar__link {
-      float: none;
+      float: right;
       width: 100%;
     }
   }

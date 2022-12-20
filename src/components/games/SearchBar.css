@@ -1,0 +1,12 @@
+.searchbar form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .searchbar input {
+    margin-left: 20px;
+  }
+  
+  .searchbar label {
+    font-family: 'Quicksand', sans-serif;
+  }

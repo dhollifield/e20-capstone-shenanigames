@@ -1,17 +1,8 @@
-import { useEffect, useState } from "react"
-import { Link, useNavigate, useParams } from "react-router-dom"
-import "./Games.css"
+import { useState } from 'react'
 
-export const GamesList = ({ searchTermState }) => {
-    const [games, setGames] = useState([])
-    const [userCollection, setUserCollection] = useState([])
-
-    const capstoneUser = localStorage.getItem("capstone_user")
-    const gamesUserObject = JSON.parse(capstoneUser)
-
-    const { userId } = useParams()
-
-    const navigate = useNavigate()
+export const SearchBar = () => {
+    const [searchInput, setSearchInput] = useState("");
+    const [games, setGames] = useState([]);
 
     const fetchGames = async () => {
         const response = await fetch(
@@ -25,109 +16,28 @@ export const GamesList = ({ searchTermState }) => {
         fetchGames();
     }, []);
 
-    const fetchUserCollection = async () => {
-        const response = await fetch(
-            `http://localhost:8088/userCollection?`
-        );
-        const collectionArray = await response.json();
-        setUserCollection(collectionArray.filter((obj) => obj.userId === gamesUserObject.id))
+    const handleChange = (e) => {
+        e.preventDefault();
+        setSearchInput(e.target.value);
     };
 
-    useEffect(() => {
-        fetchUserCollection();
-    }, [userId]);
-
-    console.log(userCollection)
-
-    
-
-    const handleAddToCollectionClick = (gameId) => {
-
-        const dataToSendToAPI = {
-            userId: gamesUserObject.id,
-            gamesId: gameId
-          };
-
-        const addGameToCollection = async () => {
-                const options = {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/json",
-                  },
-                  body: JSON.stringify(dataToSendToAPI),
-                };
-                const response = await fetch(`http://localhost:8088/userCollection`, options);
-                await response.json()
-                if (gamesUserObject.isAdmin) {
-                    navigate('/adminCollection')
-                } else {
-                    navigate('/userCollection')
-                }
-              };
-              addGameToCollection();
-    }
-
-    const handleAddToWishListClick = (gameId) => {
-
-        const dataToSendToAPI = {
-            userId: gamesUserObject.id,
-            gamesId: gameId
-          };
-
-        const addGameToWishList = async () => {
-                const options = {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/json",
-                  },
-                  body: JSON.stringify(dataToSendToAPI),
-                };
-                const response = await fetch(`http://localhost:8088/userWishlist`, options);
-                await response.json()
-                if (gamesUserObject.isAdmin) {
-                    navigate('/adminWishlist')
-                } else {
-                    navigate('/userWishlist')
-                }
-              };
-              addGameToWishList();
-    }
-
-    const editButton = (gamesId) => {
-        return (
-          <Link to={`/editGame/${gamesId}`}>
-            <button className="gameButton editGameButton">Edit Game</button>                                       
-          </Link>
-        );
-    };
-
-    const deleteButton = (gamesId) => {
-        return (
-        <Link
-            onClick={() => {
-            const deleteGame = async () => {
-                const options = {
-                method: "DELETE",
-                };
-                await fetch(`http://localhost:8088/games/${gamesId}`, options);
-                fetchGames();
-            };
-            deleteGame();
-            navigate(`/`)
-            }}
-        >
-            <button 
-            className="gameButton deleteGameButton"
-            >
-            Delete Game
-            </button>
-        </Link>
-        );
+    if (searchInput.length > 0) {
+        games.filter((game) => {
+            return game.name.match(searchInput)
+        }) 
     };
 
     return (
         <>
         <div className="pageTitle">DISCOVER GAMES</div>
+        
+        <div>
+            <input 
+                type="search"
+                placeholder="Search for game here"
+                onChange={handleChange}
+                value={searchInput} />
+        </div>
         
         <div className="pageButtons">
             <button className="sortButton sortByAZ">Sort by A-Z</button>

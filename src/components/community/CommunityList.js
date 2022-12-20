@@ -19,15 +19,15 @@ export const CommunityList = () => {
 
     const goToCollectionButton = (id) => {
         return (
-          <Link to={`/userCollection/${id}`}>
+          <Link to={`/commuityViewCollection/${id}`}>
             <button className="gameButton goToCollectionButton">See Collection</button>                                       
           </Link>
         );
     };
 
-    const goToWishListButton = (id) => {
+    const goToWishListButton = (userId) => {
         return (
-          <Link to={`/userWishlist/${id}`}>
+          <Link to={`/userWishlist/${userId}`}>
             <button className="gameButton goToWishListButton">See Wish List</button>                                       
           </Link>
         );
@@ -43,7 +43,7 @@ export const CommunityList = () => {
                         (user) => {
                             return <section className="user" key={`user--${user.id}`}>
                                     <div className="userDetails">
-                                        <img className="profilePic" src={user.profilePic} alt="Picture Not Available"></img>
+                                        <img className="profilePic" src={user.profilePic} alt=""></img>
                                         <div className="userInfo">
                                             <div className="userName">{user.firstName} {user.lastName}</div>
                                             <p>Location: {user.cityName}, {user.stateName}</p>

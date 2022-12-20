@@ -3,26 +3,26 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Collection.css"
 
-export const UserCollection = () => {
+export const CommunityViewCollection = () => {
     const [userCollection, setUserCollection] = useState([]);
     const [sortedByAlpha, setSortedByAlpha] = useState([])
 
-    const { gamesId, userId } = useParams();
+    const { id } = useParams();
 
-    const capstoneUser = localStorage.getItem("capstone_user")
-    const gamesUserObject = JSON.parse(capstoneUser)
+    const otherUser = userCollection.userId
+    const otherUserObject = JSON.parse(otherUser)
 
-    const fetchCollection = () => {
-        fetch(`http://localhost:8088/userCollection?_expand=games`)
+    const fetchCollection = (id) => {
+        fetch(`http://localhost:8088/userCollection?id=${id}`)
         .then((response) => response.json())
         .then((userGamesArray) => {
-            setUserCollection(userGamesArray.filter((obj) => obj.userId == gamesUserObject.id));
+            setUserCollection(userGamesArray.filter((obj) => obj.userId == otherUserObject.id));
         });
     };
 
     useEffect(() => {
         fetchCollection();
-    }, [userId, gamesId]);
+    }, [id]);
 
     useEffect(
         () => {
@@ -38,25 +38,14 @@ export const UserCollection = () => {
         }, 
         [userCollection]
     )
-
-    const removeButtonClick = (id) => {
-        return fetch(`http://localhost:8088/userCollection/${id}`, {
-            method: "DELETE",
-            headers: {
-                "Content-type": "application/json",
-            },
-        }).then((response) => {
-            fetchCollection();
-        });
-    };
  
     return (
         <>
-        <div className="pageTitle">MY COLLECTION</div>
+        <div className="pageTitle"> {otherUserObject.name}'S COLLECTION</div>
 
         <article className="gamesContainer">
             {
-                userCollection.map(
+                otherUserObject.map(
                     (collection) => {
                         return <section className="game" key={`game--${collection.games.id}`}>
                                 <img className="gameImage" src={collection.games.imageURL} alt="game"></img>
@@ -64,14 +53,6 @@ export const UserCollection = () => {
                                 <p>Number of Players: {collection.games.minPlayers}-{collection.games.maxPlayers}</p>
                                 <p>Playing Time: {collection.games.minPlayingTimeInMinutes}-{collection.games.maxPlayingTimeInMinutes} minutes</p>
                                 <p>Suggested Age: {collection.games.suggestedAge}+</p>
-                                <div className="gameButtons">
-                                <button 
-                                        className="deleteButton"
-                                        onClick= {() => 
-                                        removeButtonClick(collection.id)}>
-                                            Remove from Collection
-                                    </button>
-                                </div>
                         </section>
                     }
                 )
@@ -79,4 +60,4 @@ export const UserCollection = () => {
         </article>
     </>
     )
-    };
+};

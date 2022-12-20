@@ -54,18 +54,6 @@ export const AdminWishList = () => {
         <>
         <div className="pageTitle">MY WISH LIST</div>
 
-        <div className="pageButtons">
-            <button 
-                className="sortButton sortByAZ" 
-                onClick= {() =>
-                sortedByAlpha()}>
-                    Sort by A-Z
-            </button>
-            <button className="sortButton sortByAge">Sort by Suggested Age</button>
-            <button className="sortButton sortByTime">Sort by Playing Time</button>
-            <button className="sortButton sortByPlayers">Sort by Number of Players</button>
-        </div> 
-
         <article className="gamesContainer">
             {
                 userWishlist.map(
