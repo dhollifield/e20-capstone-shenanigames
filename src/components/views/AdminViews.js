@@ -5,7 +5,7 @@ import { UserCollection } from '../collection/UserCollection';
 import { CommunityList } from '../community/CommunityList';
 import { AddGamesForm } from '../games/AddGamesForm';
 import { EditGameForm } from '../games/EditGameForm';
-import { GamesList } from '../games/GamesList';
+import { GamesContainer } from "../games/GamesContainer"
 import { AdminWishList } from '../wishlist/AdminWishList';
 import { UserWishList } from '../wishlist/UserWishList';
 
@@ -16,7 +16,7 @@ export const AdminViews = () => {
         path="/"
         element={
           <>
-            <GamesList/>
+            <GamesContainer />
           </>
         }
       ></Route>

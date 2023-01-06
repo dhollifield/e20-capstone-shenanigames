@@ -4,7 +4,8 @@ import "./Games.css"
 
 export const GamesList = ({ searchTermState }) => {
     const [games, setGames] = useState([])
-    const [userCollection, setUserCollection] = useState([])
+    // const [userCollection, setUserCollection] = useState([])
+    const [filteredGames, setFilteredGames] = useState([])
 
     const capstoneUser = localStorage.getItem("capstone_user")
     const gamesUserObject = JSON.parse(capstoneUser)
@@ -25,19 +26,30 @@ export const GamesList = ({ searchTermState }) => {
         fetchGames();
     }, []);
 
-    const fetchUserCollection = async () => {
-        const response = await fetch(
-            `http://localhost:8088/userCollection?`
-        );
-        const collectionArray = await response.json();
-        setUserCollection(collectionArray.filter((obj) => obj.userId === gamesUserObject.id))
-    };
+    useEffect(
+        () => {
+          const searchedGames = games.filter(game => {
+              return game.name.toLowerCase().includes(searchTermState.toLowerCase())
+          })
+          setFilteredGames(searchedGames)
+        },
+        [games, searchTermState]
+      )
 
-    useEffect(() => {
-        fetchUserCollection();
-    }, [userId]);
+    // ****** POTENTIAL FUTURE CODE FOR TAKING AWAY ADD TO COLLECTION BUTTON IF ALREADY IN COLLECTION ****** //
+    // const fetchUserCollection = async () => {
+    //     const response = await fetch(
+    //         `http://localhost:8088/userCollection?`
+    //     );
+    //     const collectionArray = await response.json();
+    //     setUserCollection(collectionArray.filter((obj) => obj.userId === gamesUserObject.id))
+    // };
 
-    console.log(userCollection)
+    // useEffect(() => {
+    //     fetchUserCollection();
+    // }, [userId]);
+
+    // console.log(userCollection)
 
     
 
@@ -126,9 +138,7 @@ export const GamesList = ({ searchTermState }) => {
     };
 
     return (
-        <>
-        <div className="pageTitle">DISCOVER GAMES</div>
-        
+        <>        
         <div className="pageButtons">
             <button className="sortButton sortByAZ">Sort by A-Z</button>
             <button className="sortButton sortByAge">Sort by Suggested Age</button>
@@ -150,7 +160,7 @@ export const GamesList = ({ searchTermState }) => {
 
         <article className="gamesContainer">
             {
-                games.map(
+                filteredGames.map(
                     (game) => {
                         return <section className="game" key={`game--${game.id}`}>
                                 <img className="gameImage" src={game.imageURL} alt="game"></img>

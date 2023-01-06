@@ -1,7 +1,8 @@
 export const GamesSearch =({ setterFunction }) => {
     return (
-        <div>
+        <div className="search">
             <input 
+                className="searchBar"
                 onChange={
                     (changeEvent) => {
                         setterFunction(changeEvent.target.value)

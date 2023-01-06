@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import { CommunityViewCollection } from '../collection/CommunityViewCollection';
 import { UserCollection } from '../collection/UserCollection';
 import { CommunityList } from '../community/CommunityList';
-import { GamesList } from '../games/GamesList';
+import { GamesContainer } from '../games/GamesContainer';
 import { UserWishList } from '../wishlist/UserWishList';
 
 export const UserViews = () => {
@@ -12,7 +12,7 @@ export const UserViews = () => {
         path="/"
         element={
           <>
-            <GamesList />
+            <GamesContainer />
           </>
         }
       ></Route>

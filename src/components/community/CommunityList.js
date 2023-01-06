@@ -19,7 +19,7 @@ export const CommunityList = () => {
 
     const goToCollectionButton = (id) => {
         return (
-          <Link to={`/commuityViewCollection/${id}`}>
+          <Link to={`communityViewCollection/${id}`}>
             <button className="gameButton goToCollectionButton">See Collection</button>                                       
           </Link>
         );
