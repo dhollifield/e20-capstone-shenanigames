@@ -6,29 +6,47 @@
 
 ## Current Features
 
-- Discover Games Page
+### Discover Games Page
+
 
 ![Screenshot Discover Page Admin View](/src/images/screenshot-dicover-page-admin-view.jpg)
 
-- User Collection Page
+
+
+### User Collection Page
+
 
 ![Screenshot User Collection Page](/src/images/screenshot-user-collection-page.jpg)
 
-- User Wish List Page
+
+
+### User Wish List Page
+
 
 ![Screenshot User Wish List Page](/src/images/screenshot-user-wish-list-page.jpg)
 
-- Community List (Users) Page
+
+
+### Community List (Users) Page
+
 
 ![Screenshot Community Page](/src/images/screenshot-community-page.jpg)
 
-- Add New Game Component
+
+
+### Add New Game Component
+
 
 ![Screenshot Add Game Component](/src/images/screenshot-add-game-component.jpg)
 
-- Edit Game Component
+
+
+### Edit Game Component
+
 
 ![Screenshot Edit Game Component](/src/images/screenshot-edit-game-component.jpg)
+
+
 
 ## Future Features
 
